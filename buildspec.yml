@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+  pre_build:
+    commands:
+      - npm ci
+  build:
+    command:
+      - npm run build
+artifacts:
+  files:
+    - start-service.sh
+    - stop-service.sh
+    - package.json
+    - appspec.yml
+    - 'node_modules/**/*'
