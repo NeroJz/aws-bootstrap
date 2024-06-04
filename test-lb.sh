@@ -1,0 +1,1 @@
+for run in {1..10}; do curl -s http://awsboo-LoadB-AbJ9L85kYxj8-1086024344.ap-southeast-1.elb.amazonaws.com:80; done | sort | uniq -c
